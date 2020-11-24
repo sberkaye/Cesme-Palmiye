@@ -47,6 +47,21 @@
       }
     }
 
+    &--responsive {
+      display: none;
+      background-color: $blue-dark;
+      border-radius: 100rem;
+      width: 6rem;
+      position: fixed;
+      top: 4rem;
+      right: 3rem;
+      z-index: 999;
+
+      @include respond(tab-land) {
+        display: block;
+      }
+    }
+
     &-main {
       margin-top: 2rem;
       animation: moveInRight 0.5s ease;
@@ -62,7 +77,35 @@
         }
       }
     }
+
+    @include respond(tab-land) {
+      background-color: $blue-dark;
+      width: 15rem;
+      position: fixed;
+      top: 8rem;
+      right: 8rem;
+      margin-top: 0;
+      z-index: 999;
+      animation: none;
+      animation-fill-mode: none;
+      text-align: center;
+      border-radius: 2rem;
+
+      .main {
+        display: none;
+      }
+
+      .mobile {
+        padding: 1rem;
+        float: none;
+      }
+    }
+
     &-clone {
+      @include respond(tab-land) {
+        display: none;
+      }
+
       position: fixed;
       top: 0;
       left: 0;

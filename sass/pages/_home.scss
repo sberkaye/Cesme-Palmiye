@@ -7,6 +7,10 @@
   @include respond(tab-port) {
     padding: 2rem;
   }
+
+  @include respond(phone) {
+    height: auto;
+  }
 }
 
 .section-mucadele {

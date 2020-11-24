@@ -1,3 +1,5 @@
+// console.log(window.innerWidth);
+
 window.addEventListener("scroll", () => {
   const fromTop = window.scrollY;
   const cloneNav = document.querySelector(".header__nav-clone");
