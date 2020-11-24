@@ -12,6 +12,8 @@ body {
   font-weight: 300;
   margin-bottom: 1rem;
   letter-spacing: 0.3rem;
+  animation: moveInTop 1s ease;
+  animation-fill-mode: backwards;
 }
 
 .heading-secondary {
@@ -22,6 +24,11 @@ body {
   padding: 4rem 0;
   color: $blue-dark;
   letter-spacing: 0.1rem;
+  transition: all 0.3s;
+
+  &:hover {
+    transform: rotate(-2deg) scale(1.1);
+  }
 }
 
 .heading-tertiary {

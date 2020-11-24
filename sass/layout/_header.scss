@@ -40,6 +40,8 @@
 
     &-main {
       margin-top: 2rem;
+      animation: moveInRight 0.5s ease;
+      animation-fill-mode: backwards;
 
       li {
         float: right;
@@ -57,11 +59,11 @@
       left: 0;
       z-index: 9999;
       background-image: linear-gradient(
-        rgba($blue-dark, 0.9),
-        rgba($blue-dark, 0.9)
+        rgba(lighten($blue-dark, 5%), 0.95),
+        rgba(lighten($blue-dark, 5%), 0.95)
       );
 
-      padding: 0.3rem;
+      padding: 0.4rem;
 
       text-align: center;
 
@@ -73,9 +75,9 @@
         }
 
         a {
-          border-bottom: 0.4rem solid transparent;
+          border-bottom: 0.5rem solid transparent;
           &:hover {
-            border-bottom: 0.4rem solid $green-dark;
+            border-bottom: 0.5rem solid $green-dark;
           }
         }
       }
