@@ -1,0 +1,14 @@
+{
+  "name": "cesme-palmiye",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile-sass": "sass --watch sass/main.scss css/style.css"
+  },
+  "author": "Berkay Ergin",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.29.0"
+  }
+}

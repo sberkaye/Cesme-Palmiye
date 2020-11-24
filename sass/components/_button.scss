@@ -1,0 +1,31 @@
+.btn {
+  text-decoration: none;
+  text-transform: uppercase;
+  display: inline-block;
+  margin: 2rem;
+  width: 20rem;
+  padding: 0.5rem;
+  border-radius: 10rem;
+  transition: all 0.2s;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  &-ghost {
+    color: $green-light;
+    border: 0.2rem solid $green-light;
+
+    &:hover {
+      background-color: $green-darker;
+      color: $gray-light;
+      border: 0.2rem solid $green-darker;
+    }
+  }
+
+  &-full {
+    background-color: $green-darker;
+    border: 0.2rem solid $green-darker;
+    color: #fff;
+  }
+}

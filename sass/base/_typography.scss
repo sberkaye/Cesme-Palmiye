@@ -1,0 +1,14 @@
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: $default-font-size;
+  line-height: 1.6;
+  color: $gray-light;
+}
+
+.heading-primary {
+  text-transform: uppercase;
+  font-size: 4.6rem;
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
