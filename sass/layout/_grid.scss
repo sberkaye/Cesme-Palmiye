@@ -13,6 +13,9 @@
 
     &:not(:last-child) {
       margin-right: $gutter-horizontal;
+      @include respond(tab-port) {
+        margin-right: $gutter-horizontal-small;
+      }
     }
   }
 
@@ -27,6 +30,11 @@
   // ------   ---------------
   .col-1-of-3 {
     width: calc((100% - 2 * #{$gutter-horizontal}) / 3);
+
+    @include respond(phone) {
+      width: calc(100% - #{$gutter-horizontal-small});
+      margin: 2rem auto;
+    }
   }
   .col-2-of-3 {
     width: calc(

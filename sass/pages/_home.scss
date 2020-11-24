@@ -3,12 +3,19 @@
   color: $gray-dark;
   width: 100vw;
   height: 100vh;
+
+  @include respond(tab-port) {
+    padding: 2rem;
+  }
 }
 
 .section-mucadele {
   background-color: $green-theme-lighter;
   width: 100vw;
   height: 100vh;
+  @include respond(phone) {
+    height: auto;
+  }
 }
 
 .section-iletisim {
@@ -25,6 +32,14 @@
   background-position: center;
   background-attachment: fixed;
   background-blend-mode: screen;
+
+  @include respond(tab-land) {
+    background-image: linear-gradient(
+        rgba($green-light, 0.9),
+        rgba($green-light, 0.9)
+      ),
+      url(../img/call-bg-small.jpg);
+  }
 
   @include clearfix;
 

@@ -7,6 +7,15 @@
       rgba(darken($green-dark, 65%), 0.7)
     ),
     url(../img/palm-tree-big.jpg);
+
+  @include respond(tab-land) {
+    background-image: linear-gradient(
+        to right bottom,
+        rgba(darken($green-dark, 65%), 0.7),
+        rgba(darken($green-dark, 65%), 0.7)
+      ),
+      url(../img/palm-tree-small.jpg);
+  }
   background-size: cover;
   background-position: center;
   background-attachment: fixed;

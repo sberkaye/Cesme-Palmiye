@@ -4,6 +4,10 @@ body {
   font-size: $default-font-size;
   line-height: 2;
   color: $gray-light;
+
+  @include respond(tab-land) {
+    line-height: 1.8;
+  }
 }
 
 .heading-primary {
@@ -26,6 +30,11 @@ body {
   letter-spacing: 0.1rem;
   transition: all 0.3s;
 
+  @include respond(phone) {
+    font-size: 2.6rem;
+    padding: 1rem 0;
+  }
+
   &:hover {
     transform: rotate(-2deg) scale(1.1);
   }
@@ -38,8 +47,20 @@ body {
   color: $green-light;
   border-bottom: 0.2rem solid $green-light;
   margin-bottom: 2.5rem;
+
+  @include respond(tab-port) {
+    margin-bottom: 1.5rem;
+  }
 }
 
 .text-tehlike {
   width: 80%;
+
+  @include respond(tab-port) {
+    width: 60%;
+  }
+
+  @include respond(phone) {
+    width: 75%;
+  }
 }

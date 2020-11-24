@@ -9,6 +9,10 @@
     transition: all 0.4s;
     outline-offset: 1rem;
 
+    @include respond(tab-land) {
+      width: 18rem;
+    }
+
     &-1 {
       top: 5rem;
       left: -5rem;
@@ -16,10 +20,16 @@
     &-2 {
       top: 12rem;
       left: 2rem;
+      @include respond(phone) {
+        left: -1rem;
+      }
     }
     &-3 {
       top: 19rem;
       left: -10rem;
+      @include respond(phone) {
+        left: -8rem;
+      }
     }
 
     &:hover {

@@ -1,3 +1,11 @@
+/*
+ * a mechanism to make the site responsive easier;
+ * get breakpoint with the keywords {phone, tab-port, tab-land, big-desktop}
+ * phone = 600px  -> smart phone
+ * tab-port = 900px  -> tablets in portrait position
+ * tab-land = 1200px  -> tablets in landscape position
+ * big-desktop = 1800px  -> big monitors
+ */
 @keyframes moveInTop {
   0% {
     opacity: 0;
@@ -40,6 +48,26 @@ html {
   font-size: 62.5%;
   scroll-behavior: smooth;
 }
+@media (min-width: 112.5em) {
+  html {
+    font-size: 75%;
+  }
+}
+@media (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+@media (max-width: 56.25em) {
+  html {
+    font-size: 50%;
+  }
+}
+@media (max-width: 37.5em) {
+  html {
+    font-size: 37.5%;
+  }
+}
 
 body {
   box-sizing: border-box;
@@ -52,6 +80,11 @@ body {
   font-size: 1.6rem;
   line-height: 2;
   color: #ededed;
+}
+@media (max-width: 75em) {
+  body {
+    line-height: 1.8;
+  }
 }
 
 .heading-primary {
@@ -74,6 +107,12 @@ body {
   letter-spacing: 0.1rem;
   transition: all 0.3s;
 }
+@media (max-width: 37.5em) {
+  .heading-secondary {
+    font-size: 2.6rem;
+    padding: 1rem 0;
+  }
+}
 .heading-secondary:hover {
   transform: rotate(-2deg) scale(1.1);
 }
@@ -86,9 +125,24 @@ body {
   border-bottom: 0.2rem solid #80ed99;
   margin-bottom: 2.5rem;
 }
+@media (max-width: 56.25em) {
+  .heading-tertiary {
+    margin-bottom: 1.5rem;
+  }
+}
 
 .text-tehlike {
   width: 80%;
+}
+@media (max-width: 56.25em) {
+  .text-tehlike {
+    width: 60%;
+  }
+}
+@media (max-width: 37.5em) {
+  .text-tehlike {
+    width: 75%;
+  }
 }
 
 .btn {
@@ -131,6 +185,17 @@ body {
   box-shadow: 0 0.5rem 2rem #333;
   transition: all 0.3s;
 }
+@media (max-width: 75em) {
+  .card {
+    height: 40rem;
+  }
+}
+@media (max-width: 56.25em) {
+  .card {
+    margin-left: 2rem;
+    height: 44rem;
+  }
+}
 .card__icon {
   color: #ededed;
   height: 6rem;
@@ -165,6 +230,11 @@ body {
   transition: all 0.4s;
   outline-offset: 1rem;
 }
+@media (max-width: 75em) {
+  .composition--img {
+    width: 18rem;
+  }
+}
 .composition--img-1 {
   top: 5rem;
   left: -5rem;
@@ -173,9 +243,19 @@ body {
   top: 12rem;
   left: 2rem;
 }
+@media (max-width: 37.5em) {
+  .composition--img-2 {
+    left: -1rem;
+  }
+}
 .composition--img-3 {
   top: 19rem;
   left: -10rem;
+}
+@media (max-width: 37.5em) {
+  .composition--img-3 {
+    left: -8rem;
+  }
 }
 .composition--img:hover {
   transform: scale(1.2);
@@ -206,11 +286,22 @@ body {
 .row [class^=col-]:not(:last-child) {
   margin-right: 4rem;
 }
+@media (max-width: 56.25em) {
+  .row [class^=col-]:not(:last-child) {
+    margin-right: 2rem;
+  }
+}
 .row .col-1-of-2 {
   width: calc((100% - 4rem) / 2);
 }
 .row .col-1-of-3 {
   width: calc((100% - 2 * 4rem) / 3);
+}
+@media (max-width: 37.5em) {
+  .row .col-1-of-3 {
+    width: calc(100% - 2rem);
+    margin: 2rem auto;
+  }
 }
 .row .col-2-of-3 {
   width: calc( (100% - 2 * 4rem) / 3 * 2 + 4rem );
@@ -233,6 +324,11 @@ body {
   background-position: center;
   background-attachment: fixed;
   position: relative;
+}
+@media (max-width: 75em) {
+  .header {
+    background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/palm-tree-small.jpg);
+  }
 }
 .header .hidden {
   display: none;
@@ -304,11 +400,21 @@ body {
   width: 100vw;
   height: 100vh;
 }
+@media (max-width: 56.25em) {
+  .section-tehlike {
+    padding: 2rem;
+  }
+}
 
 .section-mucadele {
   background-color: #e7fce9;
   width: 100vw;
   height: 100vh;
+}
+@media (max-width: 37.5em) {
+  .section-mucadele {
+    height: auto;
+  }
 }
 
 .section-iletisim {
@@ -319,6 +425,11 @@ body {
   background-position: center;
   background-attachment: fixed;
   background-blend-mode: screen;
+}
+@media (max-width: 75em) {
+  .section-iletisim {
+    background-image: linear-gradient(rgba(128, 237, 153, 0.9), rgba(128, 237, 153, 0.9)), url(../img/call-bg-small.jpg);
+  }
 }
 .section-iletisim::after {
   content: "";
