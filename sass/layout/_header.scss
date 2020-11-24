@@ -12,26 +12,71 @@
   background-attachment: fixed;
   position: relative;
 
-  &__main-nav {
+  .hidden {
+    display: none;
+  }
+
+  &__nav {
     list-style: none;
     display: inline-block;
-    margin: 2rem;
-    width: 95%;
+
+    width: 100%;
     text-align: right;
     li {
       font-size: 2rem;
-      float: right;
-      margin-right: 1rem;
+
+      &:not(:last-child) {
+        margin-right: 1rem;
+      }
 
       a {
         text-decoration: none;
         color: $gray-light;
-        padding: 1rem;
+        padding: 0.7rem;
         border: 0.2rem solid transparent;
         transition: all 0.2s;
+      }
+    }
 
-        &:hover {
-          border-bottom: 0.2rem solid $green-dark;
+    &-main {
+      margin-top: 2rem;
+
+      li {
+        float: right;
+
+        a {
+          &:hover {
+            border-bottom: 0.2rem solid $green-dark;
+          }
+        }
+      }
+    }
+    &-clone {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 9999;
+      background-image: linear-gradient(
+        rgba($blue-dark, 0.9),
+        rgba($blue-dark, 0.9)
+      );
+
+      padding: 0.3rem;
+
+      text-align: center;
+
+      li {
+        display: inline-block;
+
+        &:not(:last-child) {
+          margin-right: 5rem;
+        }
+
+        a {
+          border-bottom: 0.4rem solid transparent;
+          &:hover {
+            border-bottom: 0.4rem solid $green-dark;
+          }
         }
       }
     }

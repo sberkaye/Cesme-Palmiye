@@ -6,10 +6,22 @@ $blue-light: #38a3a5;
 $green-dark: #57cc99;
 $green-light: #80ed99;
 $green-theme: #c7f9cc;
+$green-theme-lighter: lighten(#c7f9cc, 7%);
 $green-darker: darken($green-dark, 20%);
 
-$gray-light: #ddd;
+$gray-light: #ededed;
+$gray-dark: #333;
 
 // FONTS
 
 $default-font-size: 1.6rem;
+
+// LAYOUT
+
+$grid-width: 114rem; // 1140px
+
+$gutter-vertical: 4rem;
+$gutter-vertical-small: 2rem;
+
+$gutter-horizontal: 4rem;
+$gutter-vertical-small: 2rem;

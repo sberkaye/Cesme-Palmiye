@@ -1,11 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/css/style.css" />
@@ -16,7 +20,12 @@
       <!-- NAVIGATION -->
       <nav>
         <div class="row">
-          <ul class="header__main-nav">
+          <ul class="header__nav header__nav-main">
+            <li><a href="#iletisim">İletişim</a></li>
+            <li><a href="#mucadele">Mücadele</a></li>
+            <li><a href="#tehlike">Tehlike</a></li>
+          </ul>
+          <ul class="header__nav header__nav-clone hidden">
             <li><a href="#tehlike">Tehlike</a></li>
             <li><a href="#mucadele">Mücadele</a></li>
             <li><a href="#iletisim">İletişim</a></li>
@@ -26,10 +35,145 @@
       <!-- HERO IMAGE AND BUTTONS -->
       <div class="header__text-box">
         <h1 class="heading-primary">Çeşme Palmİye Böceği İlaçlama</h1>
-        <a href="#" class="btn btn-ghost">Tehlike</a>
-        <a href="#" class="btn btn-ghost">Mücadele</a>
-        <a href="#" class="btn btn-full">İletişim</a>
+        <a href="#iletisim" class="btn btn-ghost">Bize ulaşın</a>
       </div>
     </header>
+    <main>
+      <!-- TEHLIKE -->
+      <section class="section-tehlike" id="tehlike">
+        <h2 class="heading-secondary">
+          Palmiye böceği tehlikesinin farkında mısınınz?
+        </h2>
+        <div class="row">
+          <div class="col-3-of-4">
+            <div class="text-tehlike">
+              <p>
+                Ülkemizde 2006 yılından itibaren görülmeye başlayan kırmızı
+                palmiye böceği her geçen gün yayılmaktadır. Aslen tropik ve
+                subtropik bölgelerin böceği olan palmiye böceklerinin ülkemizde
+                doğal düşmanı bulunmamaktadır, sadece kimyasal ve biyoteknik
+                yöntemler ile mücadele edilmektedir. Bilinçsiz yapılan mücadele
+                zaman kaybına neden olarak ağacın kaybedilmesine ve böceğin
+                yayılmasına sebebiyet vermektedir.
+              </p>
+              <br /><br />
+              <p>
+                Palmiye böcekleri yılda 3 kez üreme gerçekleştirerek 300 civarı
+                yumurta bırakmaktadır. Her bir larva 1 metre kadar tünel
+                açabilir. Ergin böcekler ise tek seferde 900 metreye kadar
+                uçabilmektedirler. Bu kısa bilgiler bile böceğin ne kadar hızlı
+                yayılabileceğini ve ağaçlara ne kadar zarar verebileceğini
+                gözler önüne sermektedir.
+              </p>
+            </div>
+          </div>
+          <div class="col-1-of-4">
+            <div class="composition">
+              <img
+                src="img/palm-beetle-1-big.jpg"
+                alt="Kırmızı palmiye böceği"
+                class="composition--img composition--img-1"
+              />
+              <img
+                src="img/palm-beetle-2-big.jpg"
+                alt="Kırmızı palmiye böceği"
+                class="composition--img composition--img-2"
+              />
+              <img
+                src="img/palm-beetle-3-big.jpg"
+                alt="Kırmızı palmiye böceği"
+                class="composition--img composition--img-3"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- MUCADELE -->
+      <section class="section-mucadele" id="mucadele">
+        <h2 class="heading-secondary">Mücadele Yöntemleri</h2>
+        <div class="row">
+          <div class="col-1-of-3">
+            <div class="card">
+              <img
+                src="img/icons/ios-contacts.png"
+                alt="Kültürel önlemler"
+                class="card__icon"
+              />
+              <h3 class="heading-tertiary">Kültürel Önlemler</h3>
+              <ul class="card__list">
+                <li>Ağaç periyodik olarak temizlenmelidir.</li>
+                <li>Sağlıklı ağaca kesim yapılmamalıdır.</li>
+                <li>Budamalar kasım ve şubat ayları arasında yapılmalıdır.</li>
+                <li>
+                  Ağzı zarar görmüş ağaçlar yakılmalı ya da gömülmelidirler.
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-1-of-3">
+            <div class="card">
+              <img
+                src="img/icons/ios-flower.png"
+                alt="Biyolojik önlemler"
+                class="card__icon"
+              />
+              <h3 class="heading-tertiary">Biyolojik Önlemler</h3>
+              <ul class="card__list">
+                <li>
+                  Feromon tuzakları ile dişi palmiye böcekleri yakalanmalıdır.
+                </li>
+              </ul>
+              <img
+                src="img/icons/ios-funnel.png"
+                alt="huni"
+                class="card__icon card__icon-below"
+              />
+            </div>
+          </div>
+          <div class="col-1-of-3">
+            <div class="card">
+              <img
+                src="img/icons/ios-flask.png"
+                alt="Kültürel önlemler"
+                class="card__icon"
+              />
+              <h3 class="heading-tertiary">Kimyasal Önlemler</h3>
+              <ul class="card__list">
+                <li>Yılda en az 3 kez 4 farklı noktadan enjeksiyon yapılır.</li>
+                <li>
+                  Palmiyenin tüm yaprakları ilaç ile yıkanır ve kökten uygulama
+                  yapılır. Bu uygulama düzenli olarak tekrarlanmalıdır.
+                </li>
+                <li>
+                  İlaçlı mücadelenin yanında ağaca vitamin ve gübre takviyesi
+                  yapılmalıdır.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ILETISIM -->
+      <section class="section-iletisim" id="iletisim">
+        <h2 class="heading-secondary">İletişim</h2>
+        <div class="row">
+          <div class="section-iletisim__list">
+            <img
+              src="img/icons/ios-call.png"
+              alt="bize ulaşın"
+              class="section-iletisim__list--img-call"
+            />
+
+            <a
+              href="tel:+90507-947-2277"
+              class="section-iletisim__list--phone-no"
+            >
+              +90 507 947 22 77
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="js/handleScroll.js"></script>
   </body>
 </html>

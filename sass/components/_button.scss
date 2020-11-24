@@ -8,10 +8,6 @@
   border-radius: 10rem;
   transition: all 0.2s;
 
-  &:hover {
-    transform: scale(1.1);
-  }
-
   &-ghost {
     color: $green-light;
     border: 0.2rem solid $green-light;
@@ -26,6 +22,11 @@
   &-full {
     background-color: $green-darker;
     border: 0.2rem solid $green-darker;
-    color: #fff;
+    color: $gray-light;
+
+    &:hover {
+      background-color: lighten($green-darker, 12%);
+      border: 0.2rem solid lighten($green-darker, 12%);
+    }
   }
 }

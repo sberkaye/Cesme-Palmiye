@@ -1,0 +1,38 @@
+.composition {
+  position: relative;
+
+  &--img {
+    box-shadow: 0 1rem 2rem $gray-dark;
+    width: 20rem;
+    position: absolute;
+    border-radius: 0.4rem;
+    transition: all 0.4s;
+    outline-offset: 1rem;
+
+    &-1 {
+      top: 5rem;
+      left: -5rem;
+    }
+    &-2 {
+      top: 12rem;
+      left: 2rem;
+    }
+    &-3 {
+      top: 19rem;
+      left: -10rem;
+    }
+
+    &:hover {
+      transform: scale(1.2);
+      outline: 1.5rem solid $green-darker;
+      z-index: 5;
+      box-shadow: 0 0.5rem 2rem $gray-dark;
+    }
+  }
+
+  // when this is hovered, select the images that are not hovered
+  &:hover &--img:not(:hover) {
+    transform: scale(0.9);
+    box-shadow: 0 1rem 1rem $gray-dark;
+  }
+}

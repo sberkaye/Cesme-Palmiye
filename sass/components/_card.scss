@@ -1,0 +1,36 @@
+.card {
+  background-color: $blue-light;
+  height: 44rem;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 2rem $gray-dark;
+  transition: all 0.3s;
+
+  &__icon {
+    color: $gray-light;
+    height: 6rem;
+
+    &-below {
+      margin-top: 5rem;
+    }
+  }
+
+  &__list {
+    list-style: none;
+    li {
+      text-align: start;
+      margin: 0.5rem;
+      padding: 0.5rem;
+
+      &:not(:last-child) {
+        border-bottom: 0.1rem solid $gray-light;
+      }
+    }
+  }
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0.5rem 4rem $gray-dark;
+  }
+}

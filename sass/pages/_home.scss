@@ -1,0 +1,64 @@
+.section-tehlike {
+  background-color: $green-theme;
+  color: $gray-dark;
+  width: 100vw;
+  height: 100vh;
+}
+
+.section-mucadele {
+  background-color: $green-theme-lighter;
+  width: 100vw;
+  height: 100vh;
+}
+
+.section-iletisim {
+  width: 100vw;
+  height: 100vh;
+
+  background-image: linear-gradient(
+      rgba($green-light, 0.9),
+      rgba($green-light, 0.9)
+    ),
+    url(../img/call-bg-big.jpg);
+
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-blend-mode: screen;
+
+  @include clearfix;
+
+  &__list {
+    display: flex;
+    margin-bottom: 10rem;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    &--img-call {
+      width: 20rem;
+      margin-right: 5rem;
+      display: inline-block;
+      background-color: $green-dark;
+      border-radius: 10rem;
+    }
+
+    &--phone-no {
+      font-size: 5rem;
+      color: $gray-dark;
+      text-decoration: none;
+      padding: 1rem;
+      background-color: $blue-dark;
+      color: $gray-light;
+      border-radius: 2rem;
+      box-shadow: 0 2rem 2rem $gray-dark;
+      transition: all 0.2s;
+
+      &:hover {
+        transform: translateY(-0.5rem) scale(1.05);
+        box-shadow: 0 2rem 4rem $gray-dark;
+      }
+    }
+  }
+}

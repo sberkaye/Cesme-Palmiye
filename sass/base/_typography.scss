@@ -2,7 +2,7 @@ body {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: $default-font-size;
-  line-height: 1.6;
+  line-height: 2;
   color: $gray-light;
 }
 
@@ -11,4 +11,28 @@ body {
   font-size: 4.6rem;
   font-weight: 300;
   margin-bottom: 1rem;
+  letter-spacing: 0.3rem;
+}
+
+.heading-secondary {
+  text-transform: uppercase;
+  font-size: 3rem;
+  font-weight: 300;
+  text-align: center;
+  padding: 4rem 0;
+  color: $blue-dark;
+  letter-spacing: 0.1rem;
+}
+
+.heading-tertiary {
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: 400;
+  color: $green-light;
+  border-bottom: 0.2rem solid $green-light;
+  margin-bottom: 2.5rem;
+}
+
+.text-tehlike {
+  width: 80%;
 }
