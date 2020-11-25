@@ -1,4 +1,11 @@
 /*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
+/*
  * a mechanism to make the site responsive easier;
  * get breakpoint with the keywords {phone, tab-port, tab-land, big-desktop}
  * phone = 600px  -> smart phone
@@ -6,33 +13,75 @@
  * tab-land = 1200px  -> tablets in landscape position
  * big-desktop = 1800px  -> big monitors
  */
-@keyframes moveInTop {
+@-webkit-keyframes moveInTop {
   0% {
     opacity: 0;
+    -webkit-transform: translateY(-10rem);
     transform: translateY(-10rem);
   }
   100% {
     opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+@keyframes moveInTop {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-10rem);
+    transform: translateY(-10rem);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+@-webkit-keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(10rem);
+    transform: translateY(10rem);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
     transform: translateY(0);
   }
 }
 @keyframes moveInBottom {
   0% {
     opacity: 0;
+    -webkit-transform: translateY(10rem);
     transform: translateY(10rem);
   }
   100% {
     opacity: 1;
+    -webkit-transform: translateY(0);
     transform: translateY(0);
+  }
+}
+@-webkit-keyframes moveInRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(10rem);
+    transform: translateX(10rem);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
   }
 }
 @keyframes moveInRight {
   0% {
     opacity: 0;
+    -webkit-transform: translateX(10rem);
     transform: translateX(10rem);
   }
   100% {
     opacity: 1;
+    -webkit-transform: translateX(0);
     transform: translateX(0);
   }
 }
@@ -41,6 +90,7 @@
 *::before {
   margin: 0;
   padding: 0;
+  -webkit-box-sizing: inherit;
   box-sizing: inherit;
 }
 
@@ -70,6 +120,7 @@ html {
 }
 
 body {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   overflow-x: hidden;
 }
@@ -93,7 +144,9 @@ body {
   font-weight: 300;
   margin-bottom: 1rem;
   letter-spacing: 0.3rem;
+  -webkit-animation: moveInTop 1s ease;
   animation: moveInTop 1s ease;
+  -webkit-animation-fill-mode: backwards;
   animation-fill-mode: backwards;
 }
 
@@ -106,6 +159,8 @@ body {
   padding: 4rem 0;
   color: #22577a;
   letter-spacing: 0.1rem;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
   transition: all 0.3s;
 }
 @media (max-width: 37.5em) {
@@ -115,6 +170,8 @@ body {
   }
 }
 .heading-secondary:hover {
+  -webkit-transform: rotate(-2deg) scale(1.1);
+  -ms-transform: rotate(-2deg) scale(1.1);
   transform: rotate(-2deg) scale(1.1);
 }
 
@@ -154,12 +211,16 @@ body {
   width: 20rem;
   padding: 0.5rem;
   border-radius: 10rem;
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
   transition: all 0.2s;
 }
 .btn-ghost {
   color: #80ed99;
   border: 0.2rem solid #80ed99;
+  -webkit-animation: moveInBottom 0.5s ease 0.5s;
   animation: moveInBottom 0.5s ease 0.5s;
+  -webkit-animation-fill-mode: backwards;
   animation-fill-mode: backwards;
 }
 .btn-ghost:hover {
@@ -183,7 +244,10 @@ body {
   padding: 2rem;
   text-align: center;
   border-radius: 0.5rem;
+  -webkit-box-shadow: 0 0.5rem 2rem #333;
   box-shadow: 0 0.5rem 2rem #333;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
   transition: all 0.3s;
 }
 @media (max-width: 75em) {
@@ -216,7 +280,10 @@ body {
   border-bottom: 0.1rem solid #ededed;
 }
 .card:hover {
+  -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
   transform: scale(1.05);
+  -webkit-box-shadow: 0 0.5rem 4rem #333;
   box-shadow: 0 0.5rem 4rem #333;
 }
 
@@ -224,10 +291,13 @@ body {
   position: relative;
 }
 .composition--img {
+  -webkit-box-shadow: 0 1rem 2rem #333;
   box-shadow: 0 1rem 2rem #333;
   width: 20rem;
   position: absolute;
   border-radius: 0.4rem;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
   transition: all 0.4s;
   outline-offset: 1rem;
 }
@@ -259,13 +329,19 @@ body {
   }
 }
 .composition--img:hover {
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
   transform: scale(1.2);
   outline: 1.5rem solid #2c9165;
   z-index: 5;
+  -webkit-box-shadow: 0 0.5rem 2rem #333;
   box-shadow: 0 0.5rem 2rem #333;
 }
 .composition:hover .composition--img:not(:hover) {
+  -webkit-transform: scale(0.9);
+  -ms-transform: scale(0.9);
   transform: scale(0.9);
+  -webkit-box-shadow: 0 1rem 1rem #333;
   box-shadow: 0 1rem 1rem #333;
 }
 
@@ -281,14 +357,14 @@ body {
 .row:not(:last-child) {
   margin-bottom: 4rem;
 }
-.row [class^=col-] {
+.row [class^="col-"] {
   float: left;
 }
-.row [class^=col-]:not(:last-child) {
+.row [class^="col-"]:not(:last-child) {
   margin-right: 4rem;
 }
 @media (max-width: 56.25em) {
-  .row [class^=col-]:not(:last-child) {
+  .row [class^="col-"]:not(:last-child) {
     margin-right: 2rem;
   }
 }
@@ -305,22 +381,41 @@ body {
   }
 }
 .row .col-2-of-3 {
-  width: calc( (100% - 2 * 4rem) / 3 * 2 + 4rem );
+  width: calc((100% - 2 * 4rem) / 3 * 2 + 4rem);
 }
 .row .col-1-of-4 {
   width: calc((100% - 3 * 4rem) / 4);
 }
 .row .col-2-of-4 {
-  width: calc( (100% - 3 * 4rem) / 4 * 2 + 4rem );
+  width: calc((100% - 3 * 4rem) / 4 * 2 + 4rem);
 }
 .row .col-3-of-4 {
-  width: calc( (100% - 3 * 4rem) / 4 * 3 + 2 * 4rem );
+  width: calc((100% - 3 * 4rem) / 4 * 3 + 2 * 4rem);
 }
 
 .header {
   height: 100vh;
   width: 100vw;
-  background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/palm-tree-big.jpg);
+  background-image: -webkit-gradient(
+      linear,
+      left top,
+      right bottom,
+      from(rgba(0, 0, 0, 0.7)),
+      to(rgba(0, 0, 0, 0.7))
+    ),
+    url(../img/palm-tree-big.jpg);
+  background-image: -o-linear-gradient(
+      left top,
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.7)
+    ),
+    url(../img/palm-tree-big.jpg);
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.7)
+    ),
+    url(../img/palm-tree-big.jpg);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -328,7 +423,26 @@ body {
 }
 @media (max-width: 75em) {
   .header {
-    background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/palm-tree-small.jpg);
+    background-image: -webkit-gradient(
+        linear,
+        left top,
+        right bottom,
+        from(rgba(0, 0, 0, 0.7)),
+        to(rgba(0, 0, 0, 0.7))
+      ),
+      url(../img/palm-tree-small.jpg);
+    background-image: -o-linear-gradient(
+        left top,
+        rgba(0, 0, 0, 0.7),
+        rgba(0, 0, 0, 0.7)
+      ),
+      url(../img/palm-tree-small.jpg);
+    background-image: linear-gradient(
+        to right bottom,
+        rgba(0, 0, 0, 0.7),
+        rgba(0, 0, 0, 0.7)
+      ),
+      url(../img/palm-tree-small.jpg);
   }
 }
 .header .hidden {
@@ -351,6 +465,8 @@ body {
   color: #ededed;
   padding: 0.7rem;
   border: 0.2rem solid transparent;
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
   transition: all 0.2s;
 }
 .header__nav--responsive {
@@ -370,7 +486,9 @@ body {
 }
 .header__nav-main {
   margin-top: 2rem;
+  -webkit-animation: moveInRight 0.5s ease;
   animation: moveInRight 0.5s ease;
+  -webkit-animation-fill-mode: backwards;
   animation-fill-mode: backwards;
 }
 .header__nav-main li {
@@ -388,7 +506,9 @@ body {
     right: 8rem;
     margin-top: 0;
     z-index: 999;
+    -webkit-animation: none;
     animation: none;
+    -webkit-animation-fill-mode: none;
     animation-fill-mode: none;
     text-align: center;
     border-radius: 2rem;
@@ -406,7 +526,21 @@ body {
   top: 0;
   left: 0;
   z-index: 9999;
-  background-image: linear-gradient(rgba(40, 101, 142, 0.95), rgba(40, 101, 142, 0.95));
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(rgba(40, 101, 142, 0.95)),
+    to(rgba(40, 101, 142, 0.95))
+  );
+  background-image: -o-linear-gradient(
+    rgba(40, 101, 142, 0.95),
+    rgba(40, 101, 142, 0.95)
+  );
+  background-image: linear-gradient(
+    rgba(40, 101, 142, 0.95),
+    rgba(40, 101, 142, 0.95)
+  );
   padding: 0.4rem;
   text-align: center;
 }
@@ -434,6 +568,8 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
 
@@ -468,7 +604,24 @@ body {
 .section-iletisim {
   width: 100vw;
   height: 100vh;
-  background-image: linear-gradient(rgba(128, 237, 153, 0.9), rgba(128, 237, 153, 0.9)), url(../img/call-bg-big.jpg);
+  background-image: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(rgba(128, 237, 153, 0.9)),
+      to(rgba(128, 237, 153, 0.9))
+    ),
+    url(../img/call-bg-big.jpg);
+  background-image: -o-linear-gradient(
+      rgba(128, 237, 153, 0.9),
+      rgba(128, 237, 153, 0.9)
+    ),
+    url(../img/call-bg-big.jpg);
+  background-image: linear-gradient(
+      rgba(128, 237, 153, 0.9),
+      rgba(128, 237, 153, 0.9)
+    ),
+    url(../img/call-bg-big.jpg);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -476,7 +629,24 @@ body {
 }
 @media (max-width: 75em) {
   .section-iletisim {
-    background-image: linear-gradient(rgba(128, 237, 153, 0.9), rgba(128, 237, 153, 0.9)), url(../img/call-bg-small.jpg);
+    background-image: -webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        from(rgba(128, 237, 153, 0.9)),
+        to(rgba(128, 237, 153, 0.9))
+      ),
+      url(../img/call-bg-small.jpg);
+    background-image: -o-linear-gradient(
+        rgba(128, 237, 153, 0.9),
+        rgba(128, 237, 153, 0.9)
+      ),
+      url(../img/call-bg-small.jpg);
+    background-image: linear-gradient(
+        rgba(128, 237, 153, 0.9),
+        rgba(128, 237, 153, 0.9)
+      ),
+      url(../img/call-bg-small.jpg);
   }
 }
 .section-iletisim::after {
@@ -485,10 +655,19 @@ body {
   clear: both;
 }
 .section-iletisim__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin-bottom: 10rem;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   width: 100%;
 }
@@ -507,12 +686,16 @@ body {
   background-color: #22577a;
   color: #ededed;
   border-radius: 2rem;
+  -webkit-box-shadow: 0 2rem 2rem #333;
   box-shadow: 0 2rem 2rem #333;
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
   transition: all 0.2s;
 }
 .section-iletisim__list--phone-no:hover {
+  -webkit-transform: translateY(-0.5rem) scale(1.05);
+  -ms-transform: translateY(-0.5rem) scale(1.05);
   transform: translateY(-0.5rem) scale(1.05);
+  -webkit-box-shadow: 0 2rem 4rem #333;
   box-shadow: 0 2rem 4rem #333;
 }
-
-/*# sourceMappingURL=style.css.map */
